@@ -14,7 +14,7 @@ const BannerSection = () => {
             <div
               className={styles.box}
               data-aos="fade-up"
-              // data-aos-delay="250"
+              data-aos-delay={1400}
               style={{
                 backgroundColor: "#e6f3fa",
               }}
@@ -22,7 +22,7 @@ const BannerSection = () => {
               <div className={styles.text}>
                 <h4 className={FONTS.font3}>100% Natural</h4>
                 <h1>
-                  Amla Candy <br/>
+                  Amla Candy <br />
                   Cut Pieces
                 </h1>
                 <p>
@@ -41,7 +41,7 @@ const BannerSection = () => {
             <div
               className={styles.box}
               data-aos="fade-up"
-              data-aos-delay="150"
+              data-aos-delay={1400 + 150}
               style={{
                 backgroundColor: "#eef5e5",
               }}
@@ -63,7 +63,8 @@ const BannerSection = () => {
             <div
               className={styles.box}
               data-aos="fade-up"
-              data-aos-delay="250"
+              data-aos-delay={1400 + 250}
+
               style={{
                 backgroundColor: "#f9ebe7",
               }}

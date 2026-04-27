@@ -54,9 +54,14 @@ export default function App({ Component, pageProps }) {
         <title>T Nature | Home</title>
       </Head>
 
+      {
+        isHome && loading && <LoadingScreen />
+
+      }
+
 
       <main className={FONTS.font1}>
-        
+
         <Layout>
           <Component {...pageProps} />
           <ToastContainer position="bottom-right" />
