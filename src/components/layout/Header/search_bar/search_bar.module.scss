@@ -8,18 +8,21 @@
 
   input {
     background-color: transparent;
-    border: none;
+    border: none !important;
     font-size: 1rem;
     padding: 10px 24px;
     width: 500px;
     border-right: 1px solid $color_text_grey2;
+    outline: none !important;
   }
 
-  > div {
+  >div {
     padding: 10px 20px;
+
     &:hover {
       background-color: $color_text_grey2;
     }
+
     cursor: pointer;
   }
 }
