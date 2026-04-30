@@ -15,7 +15,7 @@ import Link from "next/link";
 import { CONTACT_DETAILS } from "@/constants/conatct";
 import Logo from "@/components/common/logo/logo";
 import FONTS from "@/styles/fonts";
-import { PAGES } from "@/constants/constants";
+
 
 const NavItem = ({ item, setShowDrawer }) => {
   const [showDropDown, setShowDropDown] = useState(false);
@@ -92,11 +92,11 @@ const RightMenu = ({ pages }) => {
           className={styles.drawer}
         >
           <Offcanvas.Header closeButton className={styles.drawerHeader}>
-            <Logo width={80}/>
+            <Logo width={80} />
           </Offcanvas.Header>
 
           <Offcanvas.Body className={styles.drawerBody}>
-            
+
             <div>
               <nav className={styles.navSm}>
                 <ul>
@@ -113,7 +113,7 @@ const RightMenu = ({ pages }) => {
               </nav>
             </div>
 
-       
+
           </Offcanvas.Body>
         </Offcanvas>
       </div>

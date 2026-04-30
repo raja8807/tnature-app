@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { CONTACT_DETAILS } from "@/constants/conatct";
 import Header from "./Header/Header";
+import SubHeader from "./Header/sub_header/sub_header";
 // import Footer from "./Footer/Footer";
 import EnquiryModal from "../common/enquiry_modal/enquiry_modal";
 import CustomButton from "../ui/custom_button/custom_button";
@@ -42,20 +43,22 @@ const Layout = ({ children }) => {
   //     const timer = setTimeout(() => {
   //       setShow(true);
   //       localStorage.setItem("enquiryPopupShown", "true");
-  //     }, 5000);
+  //     }, 5000);  
   //     return () => clearTimeout(timer);
   //   }
   // }, [])
 
+
+
   return (
     <div className={styles.Layout}>
       <Header />
+      <SubHeader />
       {children}
-      {/* <EnquireButton setShow={setShow} />
-      <WhatsappButton /> */}
+
 
       <Footer />
-      {/* <EnquiryModal show={show} setShow={setShow} /> */}
+
     </div>
   );
 };

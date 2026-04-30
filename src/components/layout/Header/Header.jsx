@@ -115,8 +115,33 @@ const NavItem = ({ item }) => {
   );
 };
 
+export const RightButtons = ({ setShowSearchbar }) => {
+  return (
+    <div className={styles.right}>
+      <div>
+        <div className={styles.btns}>
+          <div>
+            <Search
+              onClick={() => {
+                setShowSearchbar((prev) => !prev);
+              }}
+            />
+          </div>
+          <div>
+            <Person />
+          </div>
+          <div>
+            <Cart2 />
+          </div>
+
+        </div>
+      </div>
+    </div>
+  )
+}
+
 const Header = () => {
-  const [showSearchbar, setShowSearchbar] = useState(false);
+
 
   return (
     <header className={styles.header}>
@@ -137,38 +162,17 @@ const Header = () => {
                 <div>
                   <Cart2 />
                 </div>
-                <RightMenu pages={PAGES} />
+
               </div>
             </div>
           </div>
         </div>
         <div className={styles.wrapSm}>
           <div>
-            <Logo width={100} />
-
-            <div className={styles.right}>
-              <div>
-                <div className={styles.btns}>
-                  <div>
-                    <Person />
-                  </div>
-                  <div>
-                    <Cart2 />
-                  </div>
-                  <div>
-                    <Search
-                      onClick={() => {
-                        setShowSearchbar((prev) => !prev);
-                      }}
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
+            <Logo width={110} />
             <RightMenu pages={PAGES} />
           </div>
-          <br />
-          {showSearchbar && <Searchbar />}
+
         </div>
       </CustomContainer>
     </header>

@@ -1,24 +1,22 @@
 import React, { useState } from "react";
 import styles from "./product_card.module.scss";
 import Image from "next/image";
-import { Heart, StarFill, Dash, Plus } from "react-bootstrap-icons";
+import { Heart, Star, Bag, HeartFill } from "react-bootstrap-icons";
 
 const ProductCard = ({ product }) => {
-  const [quantity, setQuantity] = useState(1);
 
-  const handleDecrease = () => {
-    if (quantity > 1) setQuantity(quantity - 1);
-  };
-
-  const handleIncrease = () => {
-    setQuantity(quantity + 1);
-  };
+  const [isLiked, setIsLiked] = useState(false)
 
   return (
     <div className={styles.productCard} data-aos="fade-up">
       <div className={styles.imageWrapper}>
-        <button className={styles.wishlistBtn} aria-label="Add to wishlist">
-          <Heart />
+        <button className={`${styles.wishlistBtn} ${isLiked ? styles.liked : ""}`} aria-label="Add to wishlist" onClick={() => { setIsLiked(!isLiked) }}>
+          {
+            isLiked ?
+              <HeartFill />
+              :
+              <Heart />
+          }
         </button>
         <Image
           src={product.image}
@@ -30,27 +28,22 @@ const ProductCard = ({ product }) => {
       </div>
       <div className={styles.content}>
         <h3 className={styles.title}>{product.name}</h3>
-        <div className={styles.meta}>
-          <span className={styles.unit}>{product.unit || "1 UNIT"}</span>
-          <div className={styles.rating}>
-            <StarFill className={styles.starIcon} />
-            <span>{product.rating || "4.5"}</span>
+
+        <div className={styles.bottomSection}>
+          <div className={styles.details}>
+            <span className={styles.price}>₹{product.price}</span>
+            <div className={styles.rating}>
+              <Star className={styles.starIcon} />
+              <Star className={styles.starIcon} />
+              <Star className={styles.starIcon} />
+              <Star className={styles.starIcon} />
+              <Star className={styles.starIcon} />
+            </div>
           </div>
-        </div>
-        <div className={styles.priceSection}>
-          <span className={styles.price}>₹{product.price}</span>
-        </div>
-        <div className={styles.actions}>
-          <div className={styles.quantitySelector}>
-            <button onClick={handleDecrease} className={styles.qtyBtn}>
-              <Dash />
-            </button>
-            <span className={styles.qtyValue}>{quantity}</span>
-            <button onClick={handleIncrease} className={styles.qtyBtn}>
-              <Plus />
-            </button>
-          </div>
-          <button className={styles.addToCartBtn}>Add to Cart</button>
+
+          <button className={styles.cartBtn} aria-label="Add to cart">
+            <Bag />
+          </button>
         </div>
       </div>
     </div>

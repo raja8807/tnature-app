@@ -38,14 +38,20 @@ export default function App({ Component, pageProps }) {
 
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 1400);
-  }, []);
-
   const router = useRouter();
   const isHome = router.pathname === "/";
+
+  useEffect(() => {
+    if (!isHome) {
+      setLoading(false)
+    } else {
+      setTimeout(() => {
+        setLoading(false);
+      }, 1400);
+    }
+  }, [isHome]);
+
+
 
   return (
     <>
@@ -55,19 +61,17 @@ export default function App({ Component, pageProps }) {
       </Head>
 
       {
-        isHome && loading && <LoadingScreen />
+        loading ? <LoadingScreen />
+          :
+          <main className={FONTS.font1}>
 
+            <Layout>
+              <Component {...pageProps} />
+              <ToastContainer position="bottom-right" />
+            </Layout>
+
+          </main>
       }
-
-
-      <main className={FONTS.font1}>
-
-        <Layout>
-          <Component {...pageProps} />
-          <ToastContainer position="bottom-right" />
-        </Layout>
-
-      </main>
 
     </>
   );

@@ -14,7 +14,6 @@ const BannerSection = () => {
             <div
               className={styles.box}
               data-aos="fade-up"
-              data-aos-delay={1400}
               style={{
                 backgroundColor: "#e6f3fa",
               }}
@@ -22,18 +21,16 @@ const BannerSection = () => {
               <div className={styles.text}>
                 <h4 className={FONTS.font3}>100% Natural</h4>
                 <h1>
-                  Amla Candy <br />
-                  Cut Pieces
+                  Naatusakkarai <br />
+                  (Jaggery Powder)
                 </h1>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Commodi ab adipisci quis cum, corrupti et quasi sed libero
-                  voluptatem nam.
+                  Experience the purest sweetness derived directly from nature. Perfect for your healthy lifestyle.
                 </p>
                 <CustomButton>Shop Now</CustomButton>
               </div>
               <div className={styles.img}>
-                <Image src="/products/amla candy.png" fluid alt="prod1" />
+                <Image src="/products/Naatusakkarai.png" fluid alt="jaggery" />
               </div>
             </div>
           </div>
@@ -41,7 +38,6 @@ const BannerSection = () => {
             <div
               className={styles.box}
               data-aos="fade-up"
-              data-aos-delay={1400 + 150}
               style={{
                 backgroundColor: "#eef5e5",
               }}
@@ -49,22 +45,19 @@ const BannerSection = () => {
               <div className={styles.text}>
                 <h4 className={FONTS.font3}>100% Natural</h4>
                 <h1>
-                  Himalayan Rock Salt
+                  Millet Laddu
                 </h1>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Commodi ab adipisci quis.
+                  Traditional healthy snacks made with organic millets.
                 </p>
               </div>
               <div className={styles.img}>
-                <Image src="/products/himalayan salt.png" fluid alt="prod1" />
+                <Image src="/products/millet cookie.png" fluid alt="millet laddu" />
               </div>
             </div>
             <div
               className={styles.box}
               data-aos="fade-up"
-              data-aos-delay={1400 + 250}
-
               style={{
                 backgroundColor: "#f9ebe7",
               }}
@@ -72,15 +65,15 @@ const BannerSection = () => {
               <div className={styles.text}>
                 <h4 className={FONTS.font3}>100% Natural</h4>
                 <h1>
-                  Forest Kombu Then
+                  Malai Then <br />
+                  (Hill Honey)
                 </h1>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Commodi ab adipisci quis.
+                  Sustainably sourced honey from the deep hill forests.
                 </p>
               </div>
               <div className={styles.img}>
-                <Image src="/products/kombu then.png" fluid alt="prod1" />
+                <Image src="/products/malai then (Hill Honey).png" fluid alt="malai then" />
               </div>
             </div>
           </div>
